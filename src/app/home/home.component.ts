@@ -14,7 +14,7 @@ export class HomeComponent implements OnInit {
   ) { }
 
   ngOnInit() {
-    this.sayHello();
+//    this.sayHello();
   }
 
   sayHello(): void {
