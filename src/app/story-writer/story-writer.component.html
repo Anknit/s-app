@@ -1,3 +1,9 @@
 <p>
   story-writer works!
 </p>
+<div>
+    <label>Title:
+      <input [(ngModel)]="story.title" placeholder="Title">
+    </label>
+    <button type="button" (click)="saveTitle(story.title)">Save</button>
+</div>
