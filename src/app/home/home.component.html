@@ -1,4 +1,5 @@
-<p>
-  home works!
-  {{helloMessage}}
-</p>
+<ul>
+  <li *ngFor="let story of stories">
+    <a [routerLink]="['/story', story.story_id]">{{story.story_title}}</a>
+  </li>
+</ul>

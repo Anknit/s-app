@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 
+import { Story } from '../story';
 import { StoryReaderService } from '../story-reader.service';
 
 @Component({
@@ -8,18 +9,18 @@ import { StoryReaderService } from '../story-reader.service';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
-  helloMessage: String;
+  stories: Story[];
   constructor(
     private storyReaderService: StoryReaderService
   ) { }
 
   ngOnInit() {
-//    this.sayHello();
+    this.getStories();
   }
 
-  sayHello(): void {
-    this.storyReaderService.sayHello()
-      .subscribe(res => this.helloMessage = res.data);
+  getStories(): void {
+    this.storyReaderService.getStories()
+      .subscribe(res => this.stories = res.data.stories);
   }
 
 }
