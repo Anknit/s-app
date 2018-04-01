@@ -1,1 +1,7 @@
-<h3>{{story.story_title}}</h3>
+<h3>{{story?.story_title}}</h3>
+<p>
+  {{story?.story_date | date : 'MMMM dd, yyyy hh:mm a'}}
+</p>
+<p>
+  {{story?.story_text}}
+</p>

@@ -1,9 +1,19 @@
-<p>
-  story-writer works!
-</p>
-<div>
-    <label>Title:
-      <input [(ngModel)]="story.title" placeholder="Title">
-    </label>
-    <button type="button" (click)="saveTitle(story.title)">Save</button>
+<div class="row">
+  <div class="col">
+    <form>
+      <div class="form-group">
+        <label for="storyTitle">Title</label>
+        <input name="title" type="text" [(ngModel)]="story.story_title" class="form-control" id="storyTitle" placeholder="Enter title for this story">
+      </div>
+      <div class="form-group">
+        <label for="storyDate">Date</label>
+        <input name="date" type="datetime-local" [(ngModel)]="story.story_date" class="form-control" id="storyDate" placeholder="Date">
+      </div>
+      <div class="form-group">
+        <label for="storyDescription">Story</label>
+        <textarea name="story" class="form-control" [(ngModel)]="story.story_text" id="storyDescription" placeholder="Write your story" rows="10"></textarea>
+      </div>
+      <button type="submit" class="btn btn-primary" (click)="createStory()">Save</button>
+    </form>
+  </div>
 </div>

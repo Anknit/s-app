@@ -12,6 +12,7 @@ import { StoryWriterComponent } from './story-writer/story-writer.component';
 import { StoryReaderService } from './story-reader.service';
 import { StoryWriterService } from './story-writer.service';
 import { AppRoutingModule } from './app-routing.module';
+import { AppNavbarComponent } from './app-navbar/app-navbar.component';
 
 
 @NgModule({
@@ -20,7 +21,8 @@ import { AppRoutingModule } from './app-routing.module';
     HomeComponent,
     StoryComponent,
     StoryListComponent,
-    StoryWriterComponent
+    StoryWriterComponent,
+    AppNavbarComponent
   ],
   imports: [
     BrowserModule,
